@@ -43,7 +43,7 @@ patch:
 
   simplifier:
     option_name: zh_simp
-    
+
   engine:
     processors:
       - ascii_composer
@@ -84,7 +84,7 @@ patch:
     enable_completion: false
     enable_sentence: false
     initial_quality: -3
-      
+
  # 載入朙月拼音擴充詞庫
   "translator/dictionary": luna_pinyin.extended
   # 改寫拼寫運算，使得含西文的詞彙（位於 luna_pinyin.cn_en.dict.yaml 中）不影響簡拼功能（注意，此功能只適用於朙月拼音系列方案，不適用於各類雙拼方案）
@@ -117,8 +117,8 @@ patch:
       uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
       url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
       punct: "^/([a-z]+|[0-9]0?)$"
-      
-     
+
+
  # 模糊拼音
   'speller/algebra':
     - erase/^xx$/                      # 第一行保留
@@ -167,7 +167,7 @@ patch:
     - derive/iu$/iou/                  # jiu = jiou,
 
     # 自動糾正一些常見的按鍵錯誤
-    - derive/([aeiou])ng$/$1gn/        # dagn => dang 
+    - derive/([aeiou])ng$/$1gn/        # dagn => dang
     - derive/([dtngkhrzcs])o(u|ng)$/$1o/  # zho => zhong|zhou
     - derive/ong$/on/                  # zhonguo => zhong guo
     - derive/ao$/oa/                   # hoa => hao
